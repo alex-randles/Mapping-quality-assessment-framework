@@ -1,0 +1,117 @@
+@prefix testd: <http://www.txample.com/people/data/> .
+@prefix rr:    <http://www.w3.org/ns/r2rml#> .
+@prefix dbo:   <http://dbpedia.org/ontology/> .
+@prefix ex:    <http://www.txample.com/people/voc/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix testv: <http://www.txample.com/people/voc/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix dc:    <http://purl.org/dc/terms/> .
+
+[ a       <http://www.w3.org/ns/shacl#ValidationReport> ;
+  <http://www.w3.org/ns/shacl#conforms>
+          false ;
+  <http://www.w3.org/ns/shacl#result>
+          [ a       <http://www.w3.org/ns/shacl#ValidationResult> ;
+            <http://www.w3.org/ns/shacl#focusNode>
+                    _:b0 ;
+            <http://www.w3.org/ns/shacl#resultMessage>
+                    "No human-readable license detected. " ;
+            <http://www.w3.org/ns/shacl#resultSeverity>
+                    <http://www.w3.org/ns/shacl#Violation> ;
+            <http://www.w3.org/ns/shacl#sourceConstraint>
+                    []  ;
+            <http://www.w3.org/ns/shacl#sourceConstraintComponent>
+                    <http://www.w3.org/ns/shacl#JSConstraintComponent> ;
+            <http://www.w3.org/ns/shacl#sourceShape>
+                    <http://example.com/ns#HumanLicenseShaoe> ;
+            <http://www.w3.org/ns/shacl#value>
+                    dbo:
+          ] ;
+  <http://www.w3.org/ns/shacl#result>
+          [ a       <http://www.w3.org/ns/shacl#ValidationResult> ;
+            <http://www.w3.org/ns/shacl#focusNode>
+                    _:b1 ;
+            <http://www.w3.org/ns/shacl#resultMessage>
+                    "Logical table should have one  table, view or SQL query" ;
+            <http://www.w3.org/ns/shacl#resultSeverity>
+                    <http://www.w3.org/ns/shacl#Violation> ;
+            <http://www.w3.org/ns/shacl#sourceConstraintComponent>
+                    <http://www.w3.org/ns/shacl#XoneConstraintComponent> ;
+            <http://www.w3.org/ns/shacl#sourceShape>
+                    <http://example.com/ns#SourceDataShapeProperty> ;
+            <http://www.w3.org/ns/shacl#value>
+                    _:b1
+          ] ;
+  <http://www.w3.org/ns/shacl#result>
+          [ a       <http://www.w3.org/ns/shacl#ValidationResult> ;
+            <http://www.w3.org/ns/shacl#focusNode>
+                    []  ;
+            <http://www.w3.org/ns/shacl#resultMessage>
+                    "Incorrect datatype definition detected." ;
+            <http://www.w3.org/ns/shacl#resultSeverity>
+                    <http://www.w3.org/ns/shacl#Violation> ;
+            <http://www.w3.org/ns/shacl#sourceConstraint>
+                    []  ;
+            <http://www.w3.org/ns/shacl#sourceConstraintComponent>
+                    <http://www.w3.org/ns/shacl#JSConstraintComponent> ;
+            <http://www.w3.org/ns/shacl#sourceShape>
+                    <http://example.com/ns#ValidDatatypeShape> ;
+            <http://www.w3.org/ns/shacl#value>
+                    dbo:age
+          ] ;
+  <http://www.w3.org/ns/shacl#result>
+          [ a       <http://www.w3.org/ns/shacl#ValidationResult> ;
+            <http://www.w3.org/ns/shacl#focusNode>
+                    _:b2 ;
+            <http://www.w3.org/ns/shacl#resultMessage>
+                    "Unable to derference URI." ;
+            <http://www.w3.org/ns/shacl#resultSeverity>
+                    <http://www.w3.org/ns/shacl#Violation> ;
+            <http://www.w3.org/ns/shacl#sourceConstraint>
+                    []  ;
+            <http://www.w3.org/ns/shacl#sourceConstraintComponent>
+                    <http://www.w3.org/ns/shacl#JSConstraintComponent> ;
+            <http://www.w3.org/ns/shacl#sourceShape>
+                    <http://example.com/ns#AccessibilityShape> ;
+            <http://www.w3.org/ns/shacl#value>
+                    testv:name
+          ] ;
+  <http://www.w3.org/ns/shacl#result>
+          [ a       <http://www.w3.org/ns/shacl#ValidationResult> ;
+            <http://www.w3.org/ns/shacl#focusNode>
+                    _:b2 ;
+            <http://www.w3.org/ns/shacl#resultMessage>
+                    "Usage of Undefined class or property" ;
+            <http://www.w3.org/ns/shacl#resultSeverity>
+                    <http://www.w3.org/ns/shacl#Violation> ;
+            <http://www.w3.org/ns/shacl#sourceConstraint>
+                    []  ;
+            <http://www.w3.org/ns/shacl#sourceConstraintComponent>
+                    <http://www.w3.org/ns/shacl#JSConstraintComponent> ;
+            <http://www.w3.org/ns/shacl#sourceShape>
+                    <http://example.com/ns#UndefinedShape> ;
+            <http://www.w3.org/ns/shacl#value>
+                    testv:name
+          ] ;
+  <http://www.w3.org/ns/shacl#result>
+          [ a       <http://www.w3.org/ns/shacl#ValidationResult> ;
+            <http://www.w3.org/ns/shacl#focusNode>
+                    _:b0 ;
+            <http://www.w3.org/ns/shacl#resultMessage>
+                    "Disjoint Classes Detected" ;
+            <http://www.w3.org/ns/shacl#resultSeverity>
+                    <http://www.w3.org/ns/shacl#Violation> ;
+            <http://www.w3.org/ns/shacl#sourceConstraint>
+                    []  ;
+            <http://www.w3.org/ns/shacl#sourceConstraintComponent>
+                    <http://www.w3.org/ns/shacl#JSConstraintComponent> ;
+            <http://www.w3.org/ns/shacl#sourceShape>
+                    <http://example.com/ns#DisjointShape> ;
+            <http://www.w3.org/ns/shacl#value>
+                    _:b0
+          ]
+] .

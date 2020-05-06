@@ -1,0 +1,557 @@
+@prefix dbo:   <http://dbpedia.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix ns8:   <http://open.vocab.org/terms/> .
+@prefix ns7:   <http://mappings.dbpedia.org/index.php/OntologyClass:> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix wdrs:  <http://www.w3.org/2007/05/powder-s#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix prov:  <http://www.w3.org/ns/prov#> .
+
+dbo:endPoint  rdfs:range  dbo:Place .
+
+dbo:lowestMountain  rdfs:domain  dbo:Place .
+
+dbo:areaRank  rdfs:domain  dbo:Place .
+
+dbo:refcul  rdfs:domain  dbo:Place .
+
+dbo:tree  rdfs:domain  dbo:Place .
+
+dbo:Park  rdfs:subClassOf  dbo:Place .
+
+dbo:presidentRegionalCouncilMandate
+        rdfs:domain  dbo:Place .
+
+dbo:minimumArea  rdfs:domain  dbo:Place .
+
+dbo:map  rdfs:domain  dbo:Place .
+
+dbo:longDistancePisteKilometre
+        rdfs:domain  dbo:Place .
+
+dbo:protectionStatus  rdfs:domain  dbo:Place .
+
+dbo:NaturalPlace  rdfs:subClassOf  dbo:Place .
+
+dbo:eventDate  rdfs:domain  dbo:Place .
+
+dbo:timeZone  rdfs:domain  dbo:Place .
+
+dbo:municipalityCode  rdfs:domain  dbo:Place .
+
+dbo:typeCoordinate  rdfs:domain  dbo:Place .
+
+dbo:blueLongDistancePisteNumber
+        rdfs:domain  dbo:Place .
+
+dbo:skiPisteNumber  rdfs:domain  dbo:Place .
+
+dbo:information  rdfs:domain  dbo:Place .
+
+dbo:Place  a                 owl:Class ;
+        rdfs:comment         "Immobile things or locations."@en , "uma localização"@pt ;
+        rdfs:isDefinedBy     dbo: ;
+        rdfs:label           "περιοχή"@el , "plaats"@nl , "place"@en , "lieu"@fr , "miejsce"@pl , "lugar"@es , "áit"@ga , "lekua"@eu , "lugar"@pt , "lloc"@ca , "立地"@ja , "مكان"@ar , "Ort"@de ;
+        rdfs:subClassOf      owl:Thing ;
+        owl:equivalentClass  schema:Place , dbo:Location ;
+        owl:sameAs           dbo:Place ;
+        wdrs:describedby     <http://dbpedia.org/ontology/data/definitions.ttl> ;
+        prov:wasDerivedFrom  ns7:Place .
+
+dbo:kindOfCoordinate  rdfs:domain  dbo:Place .
+
+dbo:ground  rdfs:range  dbo:Place .
+
+dbo:supply  rdfs:domain  dbo:Place ;
+        rdfs:range   dbo:Place .
+
+dbo:homeport  rdfs:range  dbo:Place .
+
+dbo:daylightSavingTimeZone
+        rdfs:domain  dbo:Place .
+
+dbo:subPrefecture  rdfs:domain  dbo:Place .
+
+dbo:maximumArea  rdfs:domain  dbo:Place .
+
+dbo:lowestPosition  rdfs:domain  dbo:Place .
+
+dbo:neighbourRegion  rdfs:domain  dbo:Place .
+
+dbo:mapCaption  rdfs:domain  dbo:Place .
+
+dbo:statusYear  rdfs:domain  dbo:Place .
+
+dbo:province  rdfs:domain  dbo:Place .
+
+dbo:massif  rdfs:range  dbo:Place .
+
+dbo:previousEntity  rdfs:domain  dbo:Place ;
+        rdfs:range   dbo:Place .
+
+dbo:maximumElevation  rdfs:domain  dbo:Place .
+
+dbo:artificialSnowArea
+        rdfs:domain  dbo:Place .
+
+dbo:numberOfIsland  rdfs:domain  dbo:Place .
+
+dbo:nationalTopographicSystemMapNumber
+        rdfs:domain  dbo:Place .
+
+dbo:coastLength  rdfs:domain  dbo:Place .
+
+dbo:water  rdfs:domain  dbo:Place .
+
+dbo:SiteOfSpecialScientificInterest
+        rdfs:subClassOf  dbo:Place .
+
+dbo:areaQuote  rdfs:domain  dbo:Place .
+
+dbo:skiLift  rdfs:domain  dbo:Place .
+
+dbo:blackLongDistancePisteNumber
+        rdfs:domain  dbo:Place .
+
+dbo:ArchitecturalStructure
+        rdfs:subClassOf  dbo:Place .
+
+dbo:flower  rdfs:domain  dbo:Place .
+
+dbo:    ns8:defines  dbo:Place .
+
+dbo:blueSkiPisteNumber
+        rdfs:domain  dbo:Place .
+
+dbo:minimumElevation  rdfs:domain  dbo:Place .
+
+dbo:altitude  rdfs:domain  dbo:Place .
+
+dbo:humanDevelopmentIndexRank
+        rdfs:domain  dbo:Place .
+
+dbo:authorityMandate  rdfs:domain  dbo:Place .
+
+dbo:Garden  rdfs:subClassOf  dbo:Place .
+
+dbo:placeOfBurial  rdfs:range  dbo:Place .
+
+dbo:cannonNumber  rdfs:domain  dbo:Place .
+
+dbo:lawCountry  rdfs:domain  dbo:Place .
+
+dbo:ProtectedArea  rdfs:subClassOf  dbo:Place .
+
+dbo:routeStartLocation
+        rdfs:range  dbo:Place .
+
+dbo:nextEntity  rdfs:domain  dbo:Place ;
+        rdfs:range   dbo:Place .
+
+dbo:foresterDistrict  rdfs:domain  dbo:Place .
+
+dbo:part  rdfs:range  dbo:Place .
+
+dbo:parliamentType  rdfs:domain  dbo:Place .
+
+dbo:unesco  rdfs:domain  dbo:Place .
+
+dbo:releaseLocation  rdfs:range  dbo:Place .
+
+dbo:ConcentrationCamp
+        rdfs:subClassOf  dbo:Place .
+
+dbo:frontierLength  rdfs:domain  dbo:Place .
+
+dbo:retentionTime  rdfs:domain  dbo:Place .
+
+dbo:cableCar  rdfs:domain  dbo:Place .
+
+dbo:lake  rdfs:domain  dbo:Place .
+
+dbo:isoCode  rdfs:domain  dbo:Place .
+
+dbo:linkedSpace  rdfs:domain  dbo:Place .
+
+dbo:widthQuote  rdfs:domain  dbo:Place .
+
+dbo:climbUpNumber  rdfs:domain  dbo:Place .
+
+dbo:settlement  rdfs:domain  dbo:Place .
+
+dbo:endangeredSince  rdfs:domain  dbo:Place .
+
+dbo:CountrySeat  rdfs:subClassOf  dbo:Place .
+
+dbo:elevation  rdfs:domain  dbo:Place .
+
+dbo:address  rdfs:domain  dbo:Place .
+
+dbo:different  rdfs:domain  dbo:Place .
+
+dbo:relief  rdfs:domain  dbo:Place .
+
+dbo:land  rdfs:domain  dbo:Place ;
+        rdfs:range   dbo:Place .
+
+dbo:refgeo  rdfs:domain  dbo:Place .
+
+dbo:administrativeCenter
+        rdfs:range  dbo:Place .
+
+dbo:informationName  rdfs:domain  dbo:Place .
+
+dbo:isRouteStop  rdfs:domain  dbo:Place .
+
+dbo:nutsCode  rdfs:domain  dbo:Place .
+
+dbo:maximumDepth  rdfs:domain  dbo:Place .
+
+dbo:southPlace  rdfs:domain  dbo:Place ;
+        rdfs:range   dbo:Place .
+
+dbo:birthPlace  rdfs:range  dbo:Place .
+
+dbo:linkedTo  rdfs:range  dbo:Place .
+
+dbo:perimeter  rdfs:domain  dbo:Place .
+
+dbo:averageDepth  rdfs:domain  dbo:Place .
+
+dbo:grossDomesticProductPerPeople
+        rdfs:domain  dbo:Place .
+
+dbo:WineRegion  rdfs:subClassOf  dbo:Place .
+
+dbo:governingBody  rdfs:domain  dbo:Place .
+
+dbo:relatedPlaces  rdfs:domain  dbo:Place .
+
+dbo:waterPercentage  rdfs:domain  dbo:Place .
+
+dbo:bioclimate  rdfs:domain  dbo:Place .
+
+dbo:redLongDistancePisteNumber
+        rdfs:domain  dbo:Place .
+
+dbo:westPlace  rdfs:domain  dbo:Place ;
+        rdfs:range   dbo:Place .
+
+dbo:bodyDiscovered  rdfs:range  dbo:Place .
+
+dbo:livingPlace  rdfs:range  dbo:Place .
+
+dbo:codeProvincialMonument
+        rdfs:domain  dbo:Place .
+
+dbo:regency  rdfs:domain  dbo:Place .
+
+dbo:subdivisions  rdfs:domain  dbo:Place .
+
+dbo:codeMunicipalMonument
+        rdfs:domain  dbo:Place .
+
+dbo:WorldHeritageSite
+        rdfs:subClassOf  dbo:Place .
+
+dbo:PopulatedPlace  rdfs:subClassOf  dbo:Place .
+
+dbo:areaLand  rdfs:domain  dbo:Place .
+
+dbo:vehicleCode  rdfs:domain  dbo:Place .
+
+dbo:utcOffset  rdfs:domain  dbo:Place .
+
+dbo:educationPlace  rdfs:range  dbo:Place .
+
+dbo:representative  rdfs:domain  dbo:Place .
+
+dbo:refpol  rdfs:domain  dbo:Place .
+
+dbo:regionType  rdfs:domain  dbo:Place .
+
+dbo:elevationQuote  rdfs:domain  dbo:Place .
+
+dbo:areaOfCatchmentQuote
+        rdfs:domain  dbo:Place .
+
+dbo:parliament  rdfs:domain  dbo:Place .
+
+dbo:populationQuote  rdfs:domain  dbo:Place .
+
+dbo:skiTow  rdfs:domain  dbo:Place .
+
+dbo:flora  rdfs:domain  dbo:Place .
+
+dbo:output  rdfs:domain  dbo:Place .
+
+dbo:rankAgreement  rdfs:domain  dbo:Place .
+
+dbo:longDistancePisteNumber
+        rdfs:domain  dbo:Place .
+
+<http://dbpedia.org/ontology/data/definitions.ttl>
+        ns8:describes  dbo:Place .
+
+dbo:eastPlace  rdfs:domain  dbo:Place ;
+        rdfs:range   dbo:Place .
+
+dbo:originalEndPoint  rdfs:range  dbo:Place .
+
+dbo:greenSkiPisteNumber
+        rdfs:domain  dbo:Place .
+
+dbo:southEastPlace  rdfs:domain  dbo:Place ;
+        rdfs:range   dbo:Place .
+
+dbo:tu  rdfs:domain  dbo:Place .
+
+dbo:avifaunaPopulation
+        rdfs:domain  dbo:Place .
+
+dbo:subregion  rdfs:domain  dbo:Place ;
+        rdfs:range   dbo:Place .
+
+dbo:subdivisionLink  rdfs:domain  dbo:Place .
+
+dbo:district  rdfs:domain  dbo:Place .
+
+dbo:landPercentage  rdfs:domain  dbo:Place .
+
+dbo:Agent  owl:disjointWith  dbo:Place .
+
+dbo:regionLink  rdfs:domain  dbo:Place .
+
+dbo:wilaya  rdfs:range  dbo:Place .
+
+dbo:areaWater  rdfs:domain  dbo:Place .
+
+dbo:subdivisionName  rdfs:range  dbo:Place .
+
+dbo:subdivision  rdfs:domain  dbo:Place ;
+        rdfs:range   dbo:Place .
+
+dbo:startPoint  rdfs:range  dbo:Place .
+
+dbo:river  rdfs:domain  dbo:Place .
+
+dbo:lowestPlace  rdfs:domain  dbo:Place .
+
+dbo:subsystemLink  rdfs:domain  dbo:Place .
+
+dbo:landArea  rdfs:domain  dbo:Place .
+
+dbo:minimumAreaQuote  rdfs:domain  dbo:Place .
+
+dbo:CelestialBody  rdfs:subClassOf  dbo:Place .
+
+dbo:locatedInArea  rdfs:domain  dbo:Place ;
+        rdfs:range   dbo:Place .
+
+dbo:regionServed  rdfs:range  dbo:Place .
+
+dbo:mapDescription  rdfs:domain  dbo:Place .
+
+dbo:lowest  rdfs:domain  dbo:Place .
+
+dbo:annualTemperature
+        rdfs:domain  dbo:Place .
+
+dbo:northPlace  rdfs:domain  dbo:Place ;
+        rdfs:range   dbo:Place .
+
+dbo:hasOutsidePlace  rdfs:domain  dbo:Place ;
+        rdfs:range   dbo:Place .
+
+dbo:scale  rdfs:domain  dbo:Place .
+
+dbo:sourceConfluencePlace
+        rdfs:range  dbo:Place .
+
+dbo:Monument  rdfs:subClassOf  dbo:Place .
+
+dbo:hasInsidePlace  rdfs:domain  dbo:Place ;
+        rdfs:range   dbo:Place .
+
+dbo:iso31661Code  rdfs:domain  dbo:Place .
+
+dbo:unloCode  rdfs:domain  dbo:Place .
+
+dbo:route  rdfs:domain  dbo:Place .
+
+dbo:lengthQuote  rdfs:domain  dbo:Place .
+
+dbo:wholeArea  rdfs:domain  dbo:Place .
+
+dbo:capitalCoordinates
+        rdfs:domain  dbo:Place .
+
+dbo:areaTotal  rdfs:domain  dbo:Place .
+
+dbo:kindOfRock  rdfs:domain  dbo:Place .
+
+dbo:budgetYear  rdfs:domain  dbo:Place .
+
+dbo:sea  rdfs:domain  dbo:Place .
+
+dbo:biggestCity  rdfs:domain  dbo:Place .
+
+dbo:namedByLanguage  rdfs:domain  dbo:Place ;
+        rdfs:range   dbo:Place .
+
+dbo:areaCode  rdfs:domain  dbo:Place .
+
+dbo:snowParkNumber  rdfs:domain  dbo:Place .
+
+dbo:HistoricPlace  rdfs:subClassOf  dbo:Place .
+
+dbo:region  rdfs:range  dbo:Place .
+
+dbo:Mine  rdfs:subClassOf  dbo:Place .
+
+dbo:settlementAttached
+        rdfs:range  dbo:Place .
+
+dbo:regionalPrefecture
+        rdfs:domain  dbo:Place .
+
+dbo:yearOfConstruction
+        rdfs:domain  dbo:Place .
+
+dbo:fauna  rdfs:domain  dbo:Place .
+
+dbo:bird  rdfs:domain  dbo:Place .
+
+dbo:restingPlace  rdfs:range  dbo:Place .
+
+dbo:residence  rdfs:range  dbo:Place .
+
+dbo:quote  rdfs:domain  dbo:Place .
+
+dbo:routeEndLocation  rdfs:range  dbo:Place .
+
+dbo:gridReference  rdfs:domain  dbo:Place .
+
+dbo:mostDownPoint  rdfs:range  dbo:Place .
+
+dbo:closeTo  rdfs:domain  dbo:Place ;
+        rdfs:range   dbo:Place .
+
+dbo:waterArea  rdfs:domain  dbo:Place .
+
+dbo:dateAgreement  rdfs:domain  dbo:Place .
+
+dbo:lowestPoint  rdfs:range  dbo:Place .
+
+dbo:cityLink  rdfs:domain  dbo:Place .
+
+dbo:greenLongDistancePisteNumber
+        rdfs:domain  dbo:Place .
+
+dbo:historicalName  rdfs:domain  dbo:Place .
+
+dbo:provinceLink  rdfs:domain  dbo:Place .
+
+dbo:climate  rdfs:domain  dbo:Place .
+
+dbo:highestPoint  rdfs:range  dbo:Place .
+
+dbo:politicalLeader  rdfs:domain  dbo:Place .
+
+dbo:grossDomesticProductRank
+        rdfs:domain  dbo:Place .
+
+dbo:sovereignCountry  rdfs:domain  dbo:Place .
+
+dbo:blackSkiPisteNumber
+        rdfs:domain  dbo:Place .
+
+dbo:presidentGeneralCouncilMandate
+        rdfs:domain  dbo:Place .
+
+dbo:volumeQuote  rdfs:domain  dbo:Place .
+
+dbo:codeNationalMonument
+        rdfs:domain  dbo:Place .
+
+dbo:Cemetery  rdfs:subClassOf  dbo:Place .
+
+dbo:originalStartPoint
+        rdfs:range  dbo:Place .
+
+dbo:deathPlace  rdfs:range  dbo:Place .
+
+dbo:plant  rdfs:domain  dbo:Place .
+
+dbo:subsystem  rdfs:domain  dbo:Place .
+
+dbo:location  rdfs:range  dbo:Place .
+
+dbo:geolocDual  rdfs:domain  dbo:Place .
+
+dbo:southWestPlace  rdfs:domain  dbo:Place ;
+        rdfs:range   dbo:Place .
+
+dbo:mergerDate  rdfs:domain  dbo:Place .
+
+dbo:daira  rdfs:range  dbo:Place .
+
+dbo:northWestPlace  rdfs:domain  dbo:Place ;
+        rdfs:range   dbo:Place .
+
+dbo:currencyCode  rdfs:domain  dbo:Place .
+
+dbo:heritageRegister  rdfs:domain  dbo:Place .
+
+dbo:mayorArticle  rdfs:domain  dbo:Place .
+
+dbo:touristicSite  rdfs:range  dbo:Place .
+
+dbo:codeLandRegistry  rdfs:domain  dbo:Place .
+
+dbo:depth  rdfs:domain  dbo:Place .
+
+dbo:depthQuote  rdfs:domain  dbo:Place .
+
+dbo:pisciculturalPopulation
+        rdfs:domain  dbo:Place .
+
+dbo:averageDepthQuote
+        rdfs:domain  dbo:Place .
+
+dbo:skiPisteKilometre
+        rdfs:domain  dbo:Place .
+
+dbo:depths  rdfs:domain  dbo:Place .
+
+dbo:mainIsland  rdfs:domain  dbo:Place ;
+        rdfs:range   dbo:Place .
+
+dbo:historicalMap  rdfs:domain  dbo:Place .
+
+dbo:refgen  rdfs:domain  dbo:Place .
+
+dbo:announcedFrom  rdfs:range  dbo:Place .
+
+dbo:northEastPlace  rdfs:domain  dbo:Place ;
+        rdfs:range   dbo:Place .
+
+dbo:maximumDepthQuote
+        rdfs:domain  dbo:Place .
+
+dbo:limit  rdfs:domain  dbo:Place .
+
+dbo:areaDate  rdfs:domain  dbo:Place .
+
+dbo:sourceConfluenceRegion
+        rdfs:range  dbo:Place .
+
+dbo:maximumAreaQuote  rdfs:domain  dbo:Place .
+
+dbo:geologicPeriod  rdfs:domain  dbo:Place .
+
+dbo:redSkiPisteNumber
+        rdfs:domain  dbo:Place .
+
+dbo:nearestCity  rdfs:domain  dbo:Place .
