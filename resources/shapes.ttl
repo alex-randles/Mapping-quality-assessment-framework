@@ -176,21 +176,22 @@ ex:SourceDataShapeProperty
 ex:PredicateShape
     a sh:NodeShape ;
     sh:targetObjectsOf rr:predicateMap, rr:predicateObjectMap ;
-    sh:property ex:predicateShapeProperty
+    sh:property ex:PredicateShapeTermTypeProperty;
+    sh:property ex:predicateShapeIRIProperty
+
 .
 
-ex:PredicateShapeProperty
-    sh:property [
-                    sh:message "rr:termType on predicate map should be rr:IRI." ;
-                    sh:path rr:termType ;
-                    sh:in ( rr:IRI ) ;
-                ] ;
-    sh:property [
-                    sh:message "rr:predicate should be a IRI" ;
-                    sh:path rr:predicate ;
-                    sh:value ex:PredicateShape;
-                    sh:nodeKind sh:IRI ;
-                ]
+ex:PredicateShapeTermTypeProperty
+    sh:message "rr:termType on predicate map should be rr:IRI." ;
+    sh:path rr:termType ;
+    sh:in ( rr:IRI ) ;
+.
+
+ex:predicateShapeIRIProperty
+    sh:message "rr:predicate should be a IRI" ;
+    sh:path rr:predicate ;
+    sh:value ex:PredicateShape;
+    sh:nodeKind sh:IRI ;
 .
 
 
@@ -413,7 +414,7 @@ ex:ProvenanceShape
 .
 
 
-ex:HumanLicenseShaoe
+ex:HumanLicenseShape
     a sh:NodeShape ;
     sh:targetClass rr:SubjectMap ;
     sh:targetObjectsOf rr:subjectMap;
