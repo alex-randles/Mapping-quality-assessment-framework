@@ -17,10 +17,11 @@
                                  rr:predicate  testv:name
                                ] ;
         rr:predicateObjectMap  [ rr:objectMap  [ rr:column    "age" ;
-                                                 rr:datatype  xsd:date
+                                                 rr:datatype  xsd:date ;
+                                                 rr:termType  rr:IRI
                                                ] ;
                                  rr:predicate  dbo:age
                                ] ;
-        rr:subjectMap          [ rr:class     dbo:Agent , dbo:Place ;
+        rr:subjectMap          [ rr:class     dbo:Place ;
                                  rr:template  "http://example.org/person/{id}"
                                ] .

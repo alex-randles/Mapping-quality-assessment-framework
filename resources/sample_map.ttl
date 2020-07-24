@@ -14,13 +14,14 @@
 <file:///home/alex/Desktop/Mapping-quality-assessment-framework/resources/sample_map.ttl#TripleMap1>
         rr:logicalTable        []  ;
         rr:predicateObjectMap  [ rr:objectMap  [ rr:column    "age" ;
-                                                 rr:datatype  xsd:date
+                                                 rr:datatype  xsd:date ;
+                                                 rr:termType  rr:IRI
                                                ] ;
                                  rr:predicate  dbo:age
                                ] ;
         rr:predicateObjectMap  [ rr:objectMap  [ rr:column  "name" ] ;
                                  rr:predicate  testv:name
                                ] ;
-        rr:subjectMap          [ rr:class     dbo:Place , dbo:Agent ;
+        rr:subjectMap          [ rr:class     dbo:Place ;
                                  rr:template  "http://example.org/person/{id}"
                                ] .

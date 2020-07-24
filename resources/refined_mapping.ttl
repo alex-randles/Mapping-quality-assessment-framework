@@ -14,7 +14,8 @@
 <file:///home/alex/Desktop/Mapping-quality-assessment-framework/resources/sample_map.ttl#TripleMap1>
         rr:logicalTable        []  ;
         rr:predicateObjectMap  [ rr:objectMap  [ rr:column    "age" ;
-                                                 rr:datatype  xsd:integer
+                                                 rr:datatype  xsd:integer ;
+                                                 rr:termType  rr:Literal
                                                ] ;
                                  rr:predicate  dbo:age
                                ] ;

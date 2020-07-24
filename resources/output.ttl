@@ -19,23 +19,6 @@
             <http://www.w3.org/ns/shacl#focusNode>
                     _:b0 ;
             <http://www.w3.org/ns/shacl#resultMessage>
-                    "No human-readable license detected. " ;
-            <http://www.w3.org/ns/shacl#resultSeverity>
-                    <http://www.w3.org/ns/shacl#Violation> ;
-            <http://www.w3.org/ns/shacl#sourceConstraint>
-                    []  ;
-            <http://www.w3.org/ns/shacl#sourceConstraintComponent>
-                    <http://www.w3.org/ns/shacl#JSConstraintComponent> ;
-            <http://www.w3.org/ns/shacl#sourceShape>
-                    <http://example.com/ns#HumanLicenseShaoe> ;
-            <http://www.w3.org/ns/shacl#value>
-                    dbo:
-          ] ;
-  <http://www.w3.org/ns/shacl#result>
-          [ a       <http://www.w3.org/ns/shacl#ValidationResult> ;
-            <http://www.w3.org/ns/shacl#focusNode>
-                    _:b1 ;
-            <http://www.w3.org/ns/shacl#resultMessage>
                     "Logical table should have one  table, view or SQL query" ;
             <http://www.w3.org/ns/shacl#resultSeverity>
                     <http://www.w3.org/ns/shacl#Violation> ;
@@ -44,12 +27,12 @@
             <http://www.w3.org/ns/shacl#sourceShape>
                     <http://example.com/ns#SourceDataShapeProperty> ;
             <http://www.w3.org/ns/shacl#value>
-                    _:b1
+                    _:b0
           ] ;
   <http://www.w3.org/ns/shacl#result>
           [ a       <http://www.w3.org/ns/shacl#ValidationResult> ;
             <http://www.w3.org/ns/shacl#focusNode>
-                    []  ;
+                    _:b1 ;
             <http://www.w3.org/ns/shacl#resultMessage>
                     "Incorrect datatype definition detected." ;
             <http://www.w3.org/ns/shacl#resultSeverity>
@@ -100,9 +83,9 @@
   <http://www.w3.org/ns/shacl#result>
           [ a       <http://www.w3.org/ns/shacl#ValidationResult> ;
             <http://www.w3.org/ns/shacl#focusNode>
-                    _:b0 ;
+                    _:b1 ;
             <http://www.w3.org/ns/shacl#resultMessage>
-                    "Disjoint Classes Detected" ;
+                    "Domain Violation Detected" ;
             <http://www.w3.org/ns/shacl#resultSeverity>
                     <http://www.w3.org/ns/shacl#Violation> ;
             <http://www.w3.org/ns/shacl#sourceConstraint>
@@ -110,8 +93,42 @@
             <http://www.w3.org/ns/shacl#sourceConstraintComponent>
                     <http://www.w3.org/ns/shacl#JSConstraintComponent> ;
             <http://www.w3.org/ns/shacl#sourceShape>
-                    <http://example.com/ns#DisjointShape> ;
+                    <http://example.com/ns#DomainShape> ;
             <http://www.w3.org/ns/shacl#value>
-                    _:b0
+                    dbo:age
+          ] ;
+  <http://www.w3.org/ns/shacl#result>
+          [ a       <http://www.w3.org/ns/shacl#ValidationResult> ;
+            <http://www.w3.org/ns/shacl#focusNode>
+                    []  ;
+            <http://www.w3.org/ns/shacl#resultMessage>
+                    "No human-readable license detected. " ;
+            <http://www.w3.org/ns/shacl#resultSeverity>
+                    <http://www.w3.org/ns/shacl#Violation> ;
+            <http://www.w3.org/ns/shacl#sourceConstraint>
+                    []  ;
+            <http://www.w3.org/ns/shacl#sourceConstraintComponent>
+                    <http://www.w3.org/ns/shacl#JSConstraintComponent> ;
+            <http://www.w3.org/ns/shacl#sourceShape>
+                    <http://example.com/ns#HumanLicenseShape> ;
+            <http://www.w3.org/ns/shacl#value>
+                    dbo:
+          ] ;
+  <http://www.w3.org/ns/shacl#result>
+          [ a       <http://www.w3.org/ns/shacl#ValidationResult> ;
+            <http://www.w3.org/ns/shacl#focusNode>
+                    _:b1 ;
+            <http://www.w3.org/ns/shacl#resultMessage>
+                    "Incorrect range detected." ;
+            <http://www.w3.org/ns/shacl#resultSeverity>
+                    <http://www.w3.org/ns/shacl#Violation> ;
+            <http://www.w3.org/ns/shacl#sourceConstraint>
+                    []  ;
+            <http://www.w3.org/ns/shacl#sourceConstraintComponent>
+                    <http://www.w3.org/ns/shacl#JSConstraintComponent> ;
+            <http://www.w3.org/ns/shacl#sourceShape>
+                    <http://example.com/ns#ValidRangeShape> ;
+            <http://www.w3.org/ns/shacl#value>
+                    dbo:age
           ]
 ] .

@@ -24,73 +24,76 @@ public class Refinement {
     }
 
     public static void AddDomainTriple(String DomainURI, String MappingFile){
-        String rename = String.format("" +
-                "PREFIX rr: <http://www.w3.org/ns/r2rml#>" +
-                "INSERT  { ?object  rr:class <%s>}\n  WHERE {  ?subject rr:subjectMap ?object. }", DomainURI) ;
-        SPARQL.updateData(rename, FileNames.refinedMappingFile, FileNames.refinedMappingFile);
+        String message = String.format("Suggested mpdification\nWould you like to add the class %s to the subject map?(Y/n)", DomainURI);
+        boolean result = askUser(message);
+        if (result){
+            String rename = String.format("" +
+                    "PREFIX rr: <http://www.w3.org/ns/r2rml#>" +
+                    "INSERT  { ?object  rr:class <%s>}\n  WHERE {  ?subject rr:subjectMap ?object. }", DomainURI) ;
+            SPARQL.updateData(rename, FileNames.refinedMappingFile, FileNames.refinedMappingFile);
+        }
     }
 
-    public static boolean addDataTypeTriple(String dataTypeURI, String predicateURI, String MappingFile){
-//        String message = String.format("Suggested mpdification\nWould you like to add the datatype %s for the %s predicate?(Y/n)", dataTypeURI, predicateURI);
-//        boolean result = askUser(message);
-//        if (!result){
-//            return true;
-//        }
-        Model model = ModelFactory.createDefaultModel().read(FileNames.refinedMappingFile);
-        String updateQuery = String.format("" +
-                "PREFIX rr: <http://www.w3.org/ns/r2rml#>\n" +
-               "PREFIX dbo: <http://dbpedia.org/ontology/>\n" +
-               "PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>\n" +
-               "INSERT {  ?objectMap rr:datatype <%s> }\n" +
-               "WHERE\n" +
-               "  {  \n" +
-               "  ?subject rr:predicateObjectMap ?predicateObjectMap.\n" +
-               "  ?predicateObjectMap rr:predicate <%s>.\n" +
-               "  ?predicateObjectMap rr:objectMap ?objectMap.\n" +
-               "  \n" +
-               "  } ",  dataTypeURI, predicateURI);
-       SPARQL.updateData(updateQuery, FileNames.refinedMappingFile, FileNames.refinedMappingFile);
-       return  true;
+    public static void addDataTypeTriple(String dataTypeURI, String predicateURI, String MappingFile){
+        String message = String.format("Suggested mpdification\nWould you like to add the datatype %s for the %s predicate?(Y/n)", dataTypeURI, predicateURI);
+        boolean result = askUser(message);
+        if (result){
+            Model model = ModelFactory.createDefaultModel().read(FileNames.refinedMappingFile);
+            String updateQuery = String.format("" +
+                    "PREFIX rr: <http://www.w3.org/ns/r2rml#>\n" +
+                    "PREFIX dbo: <http://dbpedia.org/ontology/>\n" +
+                    "PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>\n" +
+                    "INSERT {  ?objectMap rr:datatype <%s> }\n" +
+                    "WHERE\n" +
+                    "  {  \n" +
+                    "  ?subject rr:predicateObjectMap ?predicateObjectMap.\n" +
+                    "  ?predicateObjectMap rr:predicate <%s>.\n" +
+                    "  ?predicateObjectMap rr:objectMap ?objectMap.\n" +
+                    "  \n" +
+                    "  } ",  dataTypeURI, predicateURI);
+            SPARQL.updateData(updateQuery, FileNames.refinedMappingFile, FileNames.refinedMappingFile);
+        }
     }
 
-    public static boolean changeDataTypeTriple(String correctDatatype, String incorrectDatatype, String predicateURI, String MappingFile){
-//        String message = String.format("Suggested mpdification\nWould you like to change the datatype for the %s predicate to %s ?(Y/n)", predicateURI, correctDatatype);
-//        boolean result = askUser(message);
-//        if (!result){
-//            return true;
-//        }
-        Model model = ModelFactory.createDefaultModel().read(FileNames.refinedMappingFile);
-        String updateQuery = String.format("" +
-                "PREFIX rr: <http://www.w3.org/ns/r2rml#>\n" +
-                "PREFIX dbo: <http://dbpedia.org/ontology/>\n" +
-                "PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>\n" +
-                "DELETE {  ?objectMap rr:datatype ?datatype}\n" +
-                "INSERT {  ?objectMap rr:datatype <%s> }\n" +
-                "WHERE\n" +
-                "  {  \n" +
-                "  ?subject rr:predicateObjectMap ?predicateObjectMap.\n" +
-                "  ?predicateObjectMap rr:predicate <%s>.\n" +
-                "  ?predicateObjectMap rr:objectMap ?objectMap.\n" +
-                "  ?objectMap rr:datatype ?datatype.\n" +
-                "  } ",  correctDatatype, predicateURI, incorrectDatatype);
-        SPARQL.updateData(updateQuery, FileNames.refinedMappingFile, FileNames.refinedMappingFile);
-        return  true;
+    public static void changeDataTypeTriple(String correctDatatype, String incorrectDatatype, String predicateURI, String MappingFile){
+        String message = String.format("Suggested mpdification\nWould you like to change the datatype for the %s predicate to %s ?(Y/n)", predicateURI, correctDatatype);
+        boolean result = askUser(message);
+        if (result){
+            Model model = ModelFactory.createDefaultModel().read(FileNames.refinedMappingFile);
+            String updateQuery = String.format("" +
+                    "PREFIX rr: <http://www.w3.org/ns/r2rml#>\n" +
+                    "PREFIX dbo: <http://dbpedia.org/ontology/>\n" +
+                    "PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>\n" +
+                    "DELETE {  ?objectMap rr:datatype ?datatype}\n" +
+                    "INSERT {  ?objectMap rr:datatype <%s> }\n" +
+                    "WHERE\n" +
+                    "  {  \n" +
+                    "  ?subject rr:predicateObjectMap ?predicateObjectMap.\n" +
+                    "  ?predicateObjectMap rr:predicate <%s>.\n" +
+                    "  ?predicateObjectMap rr:objectMap ?objectMap.\n" +
+                    "  ?objectMap rr:datatype ?datatype.\n" +
+                    "  } ",  correctDatatype, predicateURI, incorrectDatatype);
+            SPARQL.updateData(updateQuery, FileNames.refinedMappingFile, FileNames.refinedMappingFile);
+        }
     }
 
-    public static boolean changeTermType(String predicateURI, String termType){
-        String updateQuery = String.format("" +
-                "PREFIX rr: <http://www.w3.org/ns/r2rml#>\n" +
-                "DELETE {  ?objectMap rr:termType ?termType}\n" +
-                "INSERT {  ?objectMap rr:termType \t<%s> }\n" +
-                "WHERE\n" +
-                "  {  \n" +
-                "  ?subject rr:predicateObjectMap ?predicateObjectMap.\n" +
-                "  ?predicateObjectMap rr:predicate <%s>.\n" +
-                "  ?predicateObjectMap rr:objectMap ?objectMap.\n" +
-                "  ?objectMap rr:termType ?termType.\n" +
-                "  } ", termType, predicateURI);
-        SPARQL.updateData(updateQuery, FileNames.refinedMappingFile, FileNames.refinedMappingFile);
-        return true;
+    public static  void changeTermType(String predicateURI, String termType){
+        String message = String.format("Suggested mpdification\nWould you like to change the term type for the object map with predicate %s to %s ?(Y/n)", predicateURI, termType);
+        boolean result = askUser(message);
+        if (result) {
+            String updateQuery = String.format("" +
+                    "PREFIX rr: <http://www.w3.org/ns/r2rml#>\n" +
+                    "DELETE {  ?objectMap rr:termType ?termType}\n" +
+                    "INSERT {  ?objectMap rr:termType \t<%s> }\n" +
+                    "WHERE\n" +
+                    "  {  \n" +
+                    "  ?subject rr:predicateObjectMap ?predicateObjectMap.\n" +
+                    "  ?predicateObjectMap rr:predicate <%s>.\n" +
+                    "  ?predicateObjectMap rr:objectMap ?objectMap.\n" +
+                    "  ?objectMap rr:termType ?termType.\n" +
+                    "  } ", termType, predicateURI);
+            SPARQL.updateData(updateQuery, FileNames.refinedMappingFile, FileNames.refinedMappingFile);
+        }
     }
 
     public static boolean askUser(String message){

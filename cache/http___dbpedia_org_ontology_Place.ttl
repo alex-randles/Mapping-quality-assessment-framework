@@ -1,16 +1,16 @@
 @prefix dbo:   <http://dbpedia.org/ontology/> .
 @prefix schema: <http://schema.org/> .
-@prefix ns8:   <http://open.vocab.org/terms/> .
-@prefix ns7:   <http://mappings.dbpedia.org/index.php/OntologyClass:> .
+@prefix ns8:   <http://mappings.dbpedia.org/index.php/OntologyClass:> .
 @prefix owl:   <http://www.w3.org/2002/07/owl#> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix wdrs:  <http://www.w3.org/2007/05/powder-s#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix prov:  <http://www.w3.org/ns/prov#> .
-
-dbo:endPoint  rdfs:range  dbo:Place .
+@prefix ns3:   <http://open.vocab.org/terms/> .
 
 dbo:lowestMountain  rdfs:domain  dbo:Place .
+
+dbo:endPoint  rdfs:range  dbo:Place .
 
 dbo:areaRank  rdfs:domain  dbo:Place .
 
@@ -47,17 +47,17 @@ dbo:blueLongDistancePisteNumber
 
 dbo:skiPisteNumber  rdfs:domain  dbo:Place .
 
-dbo:information  rdfs:domain  dbo:Place .
-
 dbo:Place  a                 owl:Class ;
         rdfs:comment         "Immobile things or locations."@en , "uma localização"@pt ;
         rdfs:isDefinedBy     dbo: ;
-        rdfs:label           "περιοχή"@el , "plaats"@nl , "place"@en , "lieu"@fr , "miejsce"@pl , "lugar"@es , "áit"@ga , "lekua"@eu , "lugar"@pt , "lloc"@ca , "立地"@ja , "مكان"@ar , "Ort"@de ;
+        rdfs:label           "περιοχή"@el , "plaats"@nl , "place"@en , "lieu"@fr , "miejsce"@pl , "lugar"@pt , "áit"@ga , "lekua"@eu , "lugar"@es , "lloc"@ca , "立地"@ja , "مكان"@ar , "Ort"@de ;
         rdfs:subClassOf      owl:Thing ;
         owl:equivalentClass  schema:Place , dbo:Location ;
         owl:sameAs           dbo:Place ;
         wdrs:describedby     <http://dbpedia.org/ontology/data/definitions.ttl> ;
-        prov:wasDerivedFrom  ns7:Place .
+        prov:wasDerivedFrom  ns8:Place .
+
+dbo:information  rdfs:domain  dbo:Place .
 
 dbo:kindOfCoordinate  rdfs:domain  dbo:Place .
 
@@ -85,10 +85,10 @@ dbo:statusYear  rdfs:domain  dbo:Place .
 
 dbo:province  rdfs:domain  dbo:Place .
 
-dbo:massif  rdfs:range  dbo:Place .
-
 dbo:previousEntity  rdfs:domain  dbo:Place ;
         rdfs:range   dbo:Place .
+
+dbo:massif  rdfs:range  dbo:Place .
 
 dbo:maximumElevation  rdfs:domain  dbo:Place .
 
@@ -119,23 +119,23 @@ dbo:ArchitecturalStructure
 
 dbo:flower  rdfs:domain  dbo:Place .
 
-dbo:    ns8:defines  dbo:Place .
+dbo:    ns3:defines  dbo:Place .
 
 dbo:blueSkiPisteNumber
         rdfs:domain  dbo:Place .
 
-dbo:minimumElevation  rdfs:domain  dbo:Place .
-
-dbo:altitude  rdfs:domain  dbo:Place .
-
 dbo:humanDevelopmentIndexRank
         rdfs:domain  dbo:Place .
 
+dbo:altitude  rdfs:domain  dbo:Place .
+
+dbo:minimumElevation  rdfs:domain  dbo:Place .
+
 dbo:authorityMandate  rdfs:domain  dbo:Place .
 
-dbo:Garden  rdfs:subClassOf  dbo:Place .
-
 dbo:placeOfBurial  rdfs:range  dbo:Place .
+
+dbo:Garden  rdfs:subClassOf  dbo:Place .
 
 dbo:cannonNumber  rdfs:domain  dbo:Place .
 
@@ -155,24 +155,24 @@ dbo:part  rdfs:range  dbo:Place .
 
 dbo:parliamentType  rdfs:domain  dbo:Place .
 
-dbo:unesco  rdfs:domain  dbo:Place .
+dbo:lake  rdfs:domain  dbo:Place .
 
 dbo:releaseLocation  rdfs:range  dbo:Place .
 
-dbo:ConcentrationCamp
-        rdfs:subClassOf  dbo:Place .
+dbo:unesco  rdfs:domain  dbo:Place .
 
 dbo:frontierLength  rdfs:domain  dbo:Place .
 
-dbo:retentionTime  rdfs:domain  dbo:Place .
-
 dbo:cableCar  rdfs:domain  dbo:Place .
-
-dbo:lake  rdfs:domain  dbo:Place .
 
 dbo:isoCode  rdfs:domain  dbo:Place .
 
+dbo:retentionTime  rdfs:domain  dbo:Place .
+
 dbo:linkedSpace  rdfs:domain  dbo:Place .
+
+dbo:ConcentrationCamp
+        rdfs:subClassOf  dbo:Place .
 
 dbo:widthQuote  rdfs:domain  dbo:Place .
 
@@ -204,20 +204,20 @@ dbo:informationName  rdfs:domain  dbo:Place .
 
 dbo:isRouteStop  rdfs:domain  dbo:Place .
 
-dbo:nutsCode  rdfs:domain  dbo:Place .
-
 dbo:maximumDepth  rdfs:domain  dbo:Place .
+
+dbo:nutsCode  rdfs:domain  dbo:Place .
 
 dbo:southPlace  rdfs:domain  dbo:Place ;
         rdfs:range   dbo:Place .
 
 dbo:birthPlace  rdfs:range  dbo:Place .
 
-dbo:linkedTo  rdfs:range  dbo:Place .
+dbo:averageDepth  rdfs:domain  dbo:Place .
 
 dbo:perimeter  rdfs:domain  dbo:Place .
 
-dbo:averageDepth  rdfs:domain  dbo:Place .
+dbo:linkedTo  rdfs:range  dbo:Place .
 
 dbo:grossDomesticProductPerPeople
         rdfs:domain  dbo:Place .
@@ -269,9 +269,9 @@ dbo:representative  rdfs:domain  dbo:Place .
 
 dbo:refpol  rdfs:domain  dbo:Place .
 
-dbo:regionType  rdfs:domain  dbo:Place .
-
 dbo:elevationQuote  rdfs:domain  dbo:Place .
+
+dbo:regionType  rdfs:domain  dbo:Place .
 
 dbo:areaOfCatchmentQuote
         rdfs:domain  dbo:Place .
@@ -292,7 +292,7 @@ dbo:longDistancePisteNumber
         rdfs:domain  dbo:Place .
 
 <http://dbpedia.org/ontology/data/definitions.ttl>
-        ns8:describes  dbo:Place .
+        ns3:describes  dbo:Place .
 
 dbo:eastPlace  rdfs:domain  dbo:Place ;
         rdfs:range   dbo:Place .
@@ -313,9 +313,9 @@ dbo:avifaunaPopulation
 dbo:subregion  rdfs:domain  dbo:Place ;
         rdfs:range   dbo:Place .
 
-dbo:subdivisionLink  rdfs:domain  dbo:Place .
-
 dbo:district  rdfs:domain  dbo:Place .
+
+dbo:subdivisionLink  rdfs:domain  dbo:Place .
 
 dbo:landPercentage  rdfs:domain  dbo:Place .
 
@@ -323,9 +323,9 @@ dbo:Agent  owl:disjointWith  dbo:Place .
 
 dbo:regionLink  rdfs:domain  dbo:Place .
 
-dbo:wilaya  rdfs:range  dbo:Place .
-
 dbo:areaWater  rdfs:domain  dbo:Place .
+
+dbo:wilaya  rdfs:range  dbo:Place .
 
 dbo:subdivisionName  rdfs:range  dbo:Place .
 
@@ -342,18 +342,18 @@ dbo:subsystemLink  rdfs:domain  dbo:Place .
 
 dbo:landArea  rdfs:domain  dbo:Place .
 
-dbo:minimumAreaQuote  rdfs:domain  dbo:Place .
+dbo:locatedInArea  rdfs:domain  dbo:Place ;
+        rdfs:range   dbo:Place .
 
 dbo:CelestialBody  rdfs:subClassOf  dbo:Place .
 
-dbo:locatedInArea  rdfs:domain  dbo:Place ;
-        rdfs:range   dbo:Place .
+dbo:minimumAreaQuote  rdfs:domain  dbo:Place .
+
+dbo:lowest  rdfs:domain  dbo:Place .
 
 dbo:regionServed  rdfs:range  dbo:Place .
 
 dbo:mapDescription  rdfs:domain  dbo:Place .
-
-dbo:lowest  rdfs:domain  dbo:Place .
 
 dbo:annualTemperature
         rdfs:domain  dbo:Place .
@@ -378,9 +378,9 @@ dbo:iso31661Code  rdfs:domain  dbo:Place .
 
 dbo:unloCode  rdfs:domain  dbo:Place .
 
-dbo:route  rdfs:domain  dbo:Place .
-
 dbo:lengthQuote  rdfs:domain  dbo:Place .
+
+dbo:route  rdfs:domain  dbo:Place .
 
 dbo:wholeArea  rdfs:domain  dbo:Place .
 
@@ -413,19 +413,19 @@ dbo:Mine  rdfs:subClassOf  dbo:Place .
 dbo:settlementAttached
         rdfs:range  dbo:Place .
 
-dbo:regionalPrefecture
-        rdfs:domain  dbo:Place .
+dbo:residence  rdfs:range  dbo:Place .
 
 dbo:yearOfConstruction
+        rdfs:domain  dbo:Place .
+
+dbo:restingPlace  rdfs:range  dbo:Place .
+
+dbo:regionalPrefecture
         rdfs:domain  dbo:Place .
 
 dbo:fauna  rdfs:domain  dbo:Place .
 
 dbo:bird  rdfs:domain  dbo:Place .
-
-dbo:restingPlace  rdfs:range  dbo:Place .
-
-dbo:residence  rdfs:range  dbo:Place .
 
 dbo:quote  rdfs:domain  dbo:Place .
 
@@ -433,10 +433,10 @@ dbo:routeEndLocation  rdfs:range  dbo:Place .
 
 dbo:gridReference  rdfs:domain  dbo:Place .
 
-dbo:mostDownPoint  rdfs:range  dbo:Place .
-
 dbo:closeTo  rdfs:domain  dbo:Place ;
         rdfs:range   dbo:Place .
+
+dbo:mostDownPoint  rdfs:range  dbo:Place .
 
 dbo:waterArea  rdfs:domain  dbo:Place .
 
@@ -480,9 +480,9 @@ dbo:Cemetery  rdfs:subClassOf  dbo:Place .
 dbo:originalStartPoint
         rdfs:range  dbo:Place .
 
-dbo:deathPlace  rdfs:range  dbo:Place .
-
 dbo:plant  rdfs:domain  dbo:Place .
+
+dbo:deathPlace  rdfs:range  dbo:Place .
 
 dbo:subsystem  rdfs:domain  dbo:Place .
 
