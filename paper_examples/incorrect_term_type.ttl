@@ -1,0 +1,10 @@
+@prefix rr: <http://www.w3.org/ns/r2rml#>.
+@prefix sh: <http://www.w3.org/ns/shacl#>.
+@prefix ex: <http://example.org/>.
+
+ex:PredicateShape a sh:NodeShape ; 
+  sh:targetObjectsOf  rr:predicateMap ; 
+  sh:property [ 
+     sh:path rr:termType ; 
+     sh:in ( rr:IRI ) ; 
+  ] ;. 

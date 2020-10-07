@@ -1,0 +1,18 @@
+PREFIX rr: <http://www.w3.org/ns/r2rml#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+DELETE { 
+  ?om rr:datatype ?datatype 
+} 
+
+INSERT { 
+  ?om rr:datatype xsd:integer  
+} 
+
+WHERE {    
+  ?sub rr:predicateObjectMap ?pom. 
+  ?pom rr:predicate dbo:age. 
+  ?pom rr:objectMap ?om. 
+  ?om rr:datatype ?datatype.  
+} 

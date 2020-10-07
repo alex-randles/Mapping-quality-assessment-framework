@@ -1,0 +1,14 @@
+@prefix sh: <http://www.w3.org/ns/shacl#>.
+@prefix ex: <http://example.org/>.
+@prefix dbo: <http://dbpedia.org/ontology/>.
+
+[ sh:result [  
+  a sh:ValidationResult ; 
+  sh:focusNode _:b0 ; 
+  sh:resultMessage "Incorrect datatype definition detected." ; 
+  sh:resultSeverity sh:Violation ; 
+  sh:sourceConstraint _:b1 ; 
+  sh:sourceConstraintComponent sh:JSConstraintComponent ; 
+  sh:sourceShape ex:ValidDatatypeShape ; 
+  sh:value dbo:age ] 
+] . 

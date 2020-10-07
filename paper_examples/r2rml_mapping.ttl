@@ -1,0 +1,29 @@
+@prefix rr: <http://www.w3.org/ns/r2rml#>.
+@prefix dbo: <http://dbpedia.org/ontology/>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix ex: <http://example.org/>.
+
+<#TripleMap1> 
+
+rr:logicalTable [ rr:tableName "people" ]; 
+
+rr:subjectMap [ 
+  rr:template "http://example.org/person/{id}"; 
+  rr:class dbo:Agent; 
+]; 
+
+rr:predicateObjectMap [ 
+  rr:predicate dbo:age; 
+  rr:objectMap [ 
+    rr:column"age";                                                                    
+    rr:datatype xsd:date;  
+  ]; 
+]; 
+
+rr:predicateObjectMap [ 
+  rr:predicateMap [  
+    rr:constant ex:name; 
+    rr:termType  rr:Literal; 
+  ]; 
+  rr:objectMap [ rr:column "name"; ];                                                        
+];. 
